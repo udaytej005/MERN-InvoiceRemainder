@@ -1,0 +1,69 @@
+1. Clone the Repository
+
+Open a terminal and run:
+git clone https://github.com/udaytej005/MERN-InvoiceRemainder.git
+
+Navigate to the repository directory:
+cd MERN-InvoiceRemainder
+
+2. Install Dependencies
+The repository has two parts:
+Backend (Node.js/Express)
+Frontend (React)
+
+Install Backend Dependencies:
+Navigate to the backend folder (if the structure is backend/):
+cd backend
+
+Install dependencies:
+npm install
+
+Install Frontend Dependencies:
+Navigate to the frontend folder (if the structure is frontend/):
+cd ../frontend
+
+
+Install dependencies:
+npm install
+
+3. Set Up Environment Variables
+Create .env files for the backend and frontend as required.
+
+Backend .env:
+Create a .env file inside the backend folder:
+cd ../backend
+touch .env
+
+
+Add the following variables to the file (replace placeholders with actual values): 
+MONGO_URI=mongodb://localhost:27017/your-database-name
+JWT_SECRET=your-secret-key
+PORT=5000
+If you are using a cloud MongoDB service (e.g., MongoDB Atlas), replace MONGO_URI with your connection string.
+
+
+Start the Application
+----------------------
+Start Backend Server:
+Run the following command in the backend directory:
+npm start
+
+Start Frontend:
+Navigate to the frontend directory:
+cd ../frontend
+
+Run the following command to start the React development server:
+npm start
+
+
+Access the Application
+Open your browser and navigate to http://localhost:3000 to view the frontend.
+The backend API should be available at http://localhost:5000 or your specified port.
+
+Troubleshooting
+````````````````
+If the backend server fails to connect to MongoDB, ensure your MongoDB service is running and the MONGO_URI is correct.
+
+If there are port conflicts, update the PORT in .env or use environment variables during runtime:
+PORT=8000 npm start
+For detailed logs, check the terminal output of both servers.
